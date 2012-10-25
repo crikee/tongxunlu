@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.gsf"
+      android:versionCode="1"
+      android:versionName="1.0">
+	<uses-permission android:name="android.permission.READ_SMS"/>
+	<!-- 读取联系人权限 --> 
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- 拨打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>  
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/> 
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    
+	
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".TongXunLuTab"
+        		  android:screenOrientation="portrait"
+                  android:theme="@android:style/Theme.NoTitleBar"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>	
+        
+       	<activity
+       		android:name=".Mailbox"
+        	android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
+        <activity
+       		android:name=".MyContacts"
+        	android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
+        <activity 
+            android:name=".Sms"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
+        <activity 
+            android:name=".SecretSms"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
+        <activity 
+            android:name=".SecretMailbox"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+               
+        <activity 
+            android:name=".SecretContacts"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>	
+        
+        <activity 
+            android:name=".ContactsList"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>	
+        
+        <receiver android:name=".SmsReceiver">
+    		<intent-filter android:priority="1000">
+    			<action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+    		</intent-filter>
+    	</receiver>
+        
+    </application>
+   
+</manifest>

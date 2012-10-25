@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="fill_parent">
+	<TextView android:background="@null" android:id="@+id/tv_chatmsg_time"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:textColor="#a59f9f" android:text="周一晚上22:06" android:textSize="10dip"
+		android:gravity="center" />
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@+id/tv_chatmsg_time"
+		android:layout_marginTop="5dip" android:layout_alignParentLeft="true">
+		<TextView android:background="@drawable/incoming" android:id="@+id/tv_chatmsg_text"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"
+			android:layout_marginTop="5dip" android:textColor="#000000"
+			android:text="加了，呵呵" android:textSize="16dip"
+			android:layout_marginRight="20dip" />
+	</LinearLayout>
+</RelativeLayout>
