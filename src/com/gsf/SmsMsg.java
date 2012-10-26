@@ -6,6 +6,7 @@ public class SmsMsg {
 	private String 	body;
 	private String 	date;
 	private int 	bg;
+	private int     fouth ;
 	
 	public SmsMsg(String body, String date) {
 		this.body = body;
