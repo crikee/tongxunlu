@@ -26,6 +26,7 @@ public class Sms extends Activity {
 	private SmsViewAdapter smsAdapter;
 	private TextView title ;
 	private ProgressDialog pd;
+	private String text ;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
